@@ -4,7 +4,7 @@
     <div class="col-md-5 offset-md-3">
       <div class="card">
         <div class="card-body">
-          <h1>Update Task</h1>
+          <h1>Actualizar información</h1>
 
           <form action="/tasks/{{task._id}}/edit" method="post">
             <div class="mb-3">
@@ -30,17 +30,19 @@
                 class="form-control"
                 name="tipo"
                 placeholder="Tipo de visita">
-              <option value="frecuente">Frecuente</option>
-              <option value="eventual">Eventual</option>{{task.tipo}}</select>
+              <option value="Frecuente">Frecuente</option>
+              <option value="Eventual">Eventual</option>{{task.tipo}}</select>
             </div>
             <div class="mb-3">
-              <textarea
+              <input
                 class="form-control"
                 name="razon"
                 placeholder="Razón de visita"
-              >{{task.razon}}</textarea>
+                value="{{task.razon}}"
+              >
             </div>
-            <button class="btn btn-primary" type="submit">Update</button>
+            <a class="btn btn-dark" href="/">Cancelar</a>
+            <button class="btn btn-primary" type="submit">Actualizar</button>
           </form>
         </div>
       </div>
