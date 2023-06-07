@@ -11,18 +11,34 @@
               <input
                 class="form-control"
                 type="text"
-                name="title"
-                placeholder="Title"
-                value="{{task.title}}"
+                name="nombre"
+                placeholder="Nombre de visitante"
+                value="{{task.nombre}}"
               />
+            </div>
+            <div class="mb-3">
+              <input
+                class="form-control"
+                name="fecha"
+                type="date"
+                placeholder="Fecha de visita"
+                value="{{task.fecha}}"
+              >
+            </div>
+            <div class="mb-3">
+              <select class="form-control"
+                class="form-control"
+                name="tipo"
+                placeholder="Tipo de visita">
+              <option value="frecuente">Frecuente</option>
+              <option value="eventual">Eventual</option>{{task.tipo}}</select>
             </div>
             <div class="mb-3">
               <textarea
                 class="form-control"
-                name="description"
-                rows="3"
-                placeholder="Add a Description"
-              >{{task.description}}</textarea>
+                name="razon"
+                placeholder="Razón de visita"
+              >{{task.razon}}</textarea>
             </div>
             <button class="btn btn-primary" type="submit">Update</button>
           </form>
