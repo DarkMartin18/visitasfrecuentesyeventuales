@@ -1,0 +1,53 @@
+<div class="card card-body p-4 rounded-0 bg-dark text-white">
+  <h3>Agregar visita</h3>
+  <form action="/tasks/add" method="post">
+
+    {{! Nombre Input }}
+    <div class="mb-3">
+      <label for="nombre">Nombre:</label>
+      <input
+        id="nombre"
+        class="form-control rounded-0 bg-dark text-white"
+        type="text"
+        name="nombre"
+        placeholder="Nombre de visitante"
+        autofocus
+      />
+    </div>
+
+    {{! Fecha Input }}
+    <div class="mb-3">
+      <label for="fecha">Fecha</label>
+      <input
+        class="form-control rounded-0 bg-dark text-white"
+        name="fecha"
+        type="date"
+        placeholder="Fecha de visita"
+      ></textarea>
+    </div>
+
+    {{! Tipo Input }}
+    <div class="mb-3">
+      <label for="tipo">Tipo</label>
+      <select class="form-control rounded-0 bg-dark text-white"
+        name="tipo"
+        placeholder="Tipo de visita">
+      <option value="frecuente">Frecuente</option>
+      <option value="eventual">Eventual</option>
+      </select>
+    </div>
+
+    {{! Razón Input }}
+    <div class="mb-3">
+      <label for="razon">Razón</label>
+      <textarea
+        class="form-control rounded-0 bg-dark text-white"
+        name="razon"
+        cols="80"
+        placeholder="Razón de visita"
+      ></textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Agregar</button>
+  </form>
+</div>
