@@ -29,7 +29,7 @@ function chatResponse(userMessage) {
       messageElement.style.textAlign = "left";
       messageElement.style.margin = "10px";
       messageElement.innerHTML =
-        "<span> PetBot: </span>" + "<span>" + chatbotmessage + "</span>";
+        "<span> ChatBot: </span>" + "<span>" + chatbotmessage + "</span>";
       chatcontainer.scrollTop = chatcontainer.scrollHeight;
       
       messageElement.animate(
