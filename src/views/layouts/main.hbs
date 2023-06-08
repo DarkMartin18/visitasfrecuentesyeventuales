@@ -4,13 +4,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/images/logo.ico" type="image/x-icon">
   <title>Visitas Frecuentes y Eventuales</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/main.css">
 
+  <script>
+    function toggleChatbot() {
+      var chatbotContainer = document.getElementById("chatbot-container");
+      chatbotContainer.style.display = (chatbotContainer.style.display === "none") ? "block" : "none";
+    }
+  </script>
+
 </head>
 <body class="bg-paleta1">
   
+  <div class="fixed-bottom" style="margin-bottom: 15px; margin-left: 20px;">
+    <a href="#" class="btn btn-A btn-floating-xl"  onclick="toggleChatbot()">
+    <img src="/images/logo.png" class="rounded-circle float-left " width="60px">
+    <i class="fas fa-comments"></i> 
+    </a>
+    {{> chatarea}}
+  </div>
+
   {{>navbar}}
 
   {{{body}}}
